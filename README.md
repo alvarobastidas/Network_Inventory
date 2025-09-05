@@ -2,10 +2,10 @@
 Automated Network Inventory with REST API
 
 ## 📌 Overview
-This project automates the retrieval of network device inventory from Cisco DNA Center using REST APIs, formats the data into a CSV file, and stores it for reporting purposes.
+This project automates the retrieval of network device inventory from Cisco Meraki using REST APIs, formats the data into a CSV file, and stores it for reporting purposes.
 
 ## 🎯 Key Features
-- Connects to Cisco DNA Center API
+- Connects to Cisco Meraki API
 - Retrieves detailed device inventory
 - Exports results to CSV and Excel
 - Supports authentication via environment variables
