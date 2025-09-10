@@ -130,6 +130,8 @@ def get_inventory(dashboard): #Retrivev inventory for all accessible organizatio
 
    return pd.DataFrame(_inventory), pd.DataFrame(organizations), pd.DataFrame(_devices), pd.DataFrame(_networks), pd.DataFrame(_licenses), pd.DataFrame(_status)
 
+#Path to save files
+path = '/Users/fernando/Desktop/Alvaro/Personal/Study-Guides-Cert/Network Automation/LABS/Network_Inventory/outputs/'
 
 # Replace with your Meraki Dashboard API Key
 API_KEY = '25cabf2e15201ff8d36af3be61ef5ddc07ed43f0'
@@ -148,7 +150,7 @@ if __name__=="__main__":
    status         = df[5]
     
    # Save to Excel with multiple sheets
-   with pd.ExcelWriter("Meraki_inventory.xlsx", engine="openpyxl") as writer:
+   with pd.ExcelWriter(f"{path}Meraki_inventory.xlsx", engine="openpyxl") as writer:
       inventory.to_excel(writer, sheet_name="Inventory", index=False)
       organizations.to_excel(writer, sheet_name="Organizations", index=False)
       networks.to_excel(writer, sheet_name="Networks", index=False)
@@ -156,7 +158,7 @@ if __name__=="__main__":
       licenses.to_excel(writer, sheet_name="Licenses", index=False)
       status.to_excel(writer, sheet_name="Status", index=False)
 
-   print("\n✅ Inventory saved to 'Meraki_inventory_with_lastSeen.xlsx' ")
+   print("\n✅ Inventory saved to 'Meraki_inventory.xlsx' ")
    print("      -Inventory sheet --> full inventory")
    print("      -Organizations sheet --> Organizations list")
    print("      -Networks sheet --> Networks list")

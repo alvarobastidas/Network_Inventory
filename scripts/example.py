@@ -19,9 +19,10 @@ for item in questions:
     print(yaml.dump(item, indent=4, sort_keys=False)) # convert Python Dictionnary to YAML string and print YAML format
     break
 
+# Path to save output files
+path = '/Users/fernando/Desktop/Alvaro/Personal/Study-Guides-Cert/Network Automation/LABS/Network_Inventory/outputs/'
 
-
-with open ('data.yaml', 'w') as file:
+with open (f'{path}data.yaml', 'w') as file:
     yaml.dump(questions, file, sort_keys=False)
 
 a = {"name": "Diana", "age": 37, "country": "Ecuador"}
