@@ -12,8 +12,8 @@ This project automates the retrieval of network device inventory from Cisco Mera
 
 ## 🛠️ Skills & Tools Used
 - **Languages:** Python,
-- **Frameworks/Tools:** Netmiko, Requests library
-- **Technologies:** Cisco DNA Center, REST API, JSON, Git
+- **Frameworks/Tools:** Meraki library
+- **Technologies:** Cisco Meraki, REST API, JSON, Git
 - **Other:** Pandas, CSV/Excel handling
 
 ## 📂 Project Structure
